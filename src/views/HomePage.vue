@@ -5,13 +5,13 @@
       <div class="container">
         <div class="content__text">
           <div class="content__logo">
-            <img src="../assets/img/logo.svg" alt="logo" class="home__logo" />
+            <img src="../assets/img/logo.svg" alt="logo" class="home__logo">
             <p class="content__logo-txt">English app</p>
           </div>
           <div class="content__desc">
             <p class="content__desc-title">Effeng</p>
             <p class="content__desc-txt">
-              It’s free application for learning <br />
+              It’s free application for learning <br>
               English words
             </p>
           </div>
@@ -21,7 +21,7 @@
           </div>
         </div>
         <div class="content__img">
-          <img class="hand-effeng" src="../assets/img/phone.svg" alt="hand-effeng" />
+          <img class="hand-effeng" src="../assets/img/phone.svg" alt="hand-effeng">
         </div>
       </div>
     </main>
@@ -47,8 +47,6 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/scss/styles.scss';
-
 #home {
   background-image: url(../../public/img/bg.svg);
   object-fit: cover;
@@ -79,8 +77,6 @@ export default defineComponent({
   justify-content: center;
   height: 100%;
   background: bottom repeat-x url(../../public/img/waves.svg);
-  &__text {
-  }
 
   &__desc {
     margin-bottom: 2rem;
@@ -95,9 +91,6 @@ export default defineComponent({
       font-size: 1.75rem;
       color: $white;
     }
-  }
-
-  &__link {
   }
 
   &__logo {

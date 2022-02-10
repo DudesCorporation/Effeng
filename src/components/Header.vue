@@ -3,7 +3,7 @@
     <div class="header__container">
       <div class="header__content">
         <div class="header__logo">
-          <img src="../../public/img/logo.png" alt="logo" />
+          <img src="../../public/img/logo.png" alt="logo">
           <div class="header__logo-name">
             <router-link :to="{ name: 'Home' }">Effeng</router-link>
           </div>
@@ -35,8 +35,6 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/scss/styles.scss';
-
 .header {
   display: flex;
   justify-content: center;
