@@ -1,3 +1,3 @@
 <template>
-  <div>Feed page</div>
+  <div></div>
 </template>

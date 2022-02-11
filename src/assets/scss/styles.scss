@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Fredoka+One&family=Roboto:wght@400;500&family=Secular+One&display=swap');
+@import './normalize.scss';
+// font-family: 'Concert One', cursive;
+// font-family: 'Fredoka One', cursive;
+// font-family: 'Roboto', sans-serif;
+// font-family: 'Secular One', sans-serif;
+
+$laptop: 1264px;
+$tablet: 960px;
+$phone: 640px;
+
+$bgClr: #1f2124;
+$homeHeader: #490caa;
+$header: #252340;
+$yellow: #fafbb7;
+$hoverYellow: #fdff68;
+$white: white;
+$beige: #faf9fe;
+$purple: #37028c;
+$purpleBg: #1e1e32;
+$transcription: #0ba7ca;
+$transition: all 0.25s ease-in-out;
+
+%flexAlign {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  position: relative;
+  max-width: 200px;
+  width: 100%;
+  padding: 1.37rem 2.5rem;
+  background-color: $yellow;
+  border-radius: 1.25rem 0;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  color: $bgClr;
+  font-family: 'Concert One', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  transition: $transition;
+
+  &:after {
+    content: '\2192';
+    position: absolute;
+    color: $bgClr;
+    font-size: 2rem;
+    opacity: 0;
+    top: 0.5rem;
+    right: -1.5rem;
+    transition: 0.5s;
+  }
+
+  &:hover {
+    background-color: $hoverYellow;
+    padding-right: 1.5rem;
+    padding-left: 0.5rem;
+  }
+
+  &:hover:after {
+    opacity: 1;
+    right: 10px;
+  }
+}
+
+@keyframes fadeScale {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.75, 0.75, 1);
+  }
+
+  70% {
+    opacity: 0;
+    transform: scale3d(0.75, 0.75, 1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
