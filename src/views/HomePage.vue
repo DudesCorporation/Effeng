@@ -83,11 +83,11 @@ export default defineComponent({
     &-title {
       margin: 2rem 0;
       font-size: 4.5rem;
-      font-family: 'Concert One', cursive;
+      font-family: $concertFont;
       color: $yellow;
     }
     &-txt {
-      font-family: 'Secular One', sans-serif;
+      font-family: $secularFont;
       font-size: 1.75rem;
       color: $white;
     }
@@ -101,7 +101,7 @@ export default defineComponent({
   &__logo-txt {
     font-size: 1.5rem;
     color: $white;
-    font-family: 'Secular One', sans-serif;
+    font-family: $secularFont;
   }
 
   &__img {
