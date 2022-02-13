@@ -1,6 +1,7 @@
 <template>
-  <router-view />
+  <Suspense>
+    <router-view />
+  </Suspense>
 </template>
 
-<style src="./assets/scss/styles.scss" lang="scss">
-</style>
+<style src="./assets/scss/styles.scss" lang="scss"></style>

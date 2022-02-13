@@ -1,12 +1,13 @@
 import { createStore } from 'vuex';
+import words from './words';
+
+export class RootState {}
 
 export default createStore({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
+  state: new RootState(),
+  mutations: {},
+  actions: {},
   modules: {
+    words,
   },
 });
