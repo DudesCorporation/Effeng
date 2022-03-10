@@ -40,7 +40,7 @@ export default defineComponent({
   justify-content: center;
   height: 4.37rem;
   background-color: $homeHeader;
-  font-family: 'Concert One', cursive;
+  font-family: $concertFont;
   border-radius: 0 0 3.12rem 3.12rem;
   filter: drop-shadow(0px 4px 25px rgba(0, 0, 0, 0.5));
 

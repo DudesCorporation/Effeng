@@ -1,9 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Fredoka+One&family=Roboto:wght@400;500&family=Secular+One&display=swap');
-@import './normalize.scss';
-// font-family: 'Concert One', cursive;
-// font-family: 'Fredoka One', cursive;
-// font-family: 'Roboto', sans-serif;
-// font-family: 'Secular One', sans-serif;
 
 $laptop: 1264px;
 $tablet: 960px;
@@ -19,7 +14,13 @@ $beige: #faf9fe;
 $purple: #37028c;
 $purpleBg: #1e1e32;
 $transcription: #0ba7ca;
+
 $transition: all 0.25s ease-in-out;
+
+$concertFont: 'Concert One', cursive;
+$fredokaFont: 'Fredoka One', cursive;
+$robotoFont: 'Roboto', sans-serif;
+$secularFont: 'Secular One', sans-serif;
 
 %flexAlign {
   display: flex;
@@ -36,7 +37,7 @@ $transition: all 0.25s ease-in-out;
   font-size: 1.25rem;
   letter-spacing: 1px;
   color: $bgClr;
-  font-family: 'Concert One', cursive;
+  font-family: $concertFont;
   display: flex;
   justify-content: center;
   align-items: baseline;
