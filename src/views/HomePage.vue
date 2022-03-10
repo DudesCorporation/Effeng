@@ -3,26 +3,9 @@
     <Header />
     <main class="content">
       <div class="container">
-        <div class="content__text">
-          <div class="content__logo">
-            <img src="../assets/img/logo.svg" alt="logo" class="home__logo">
-            <p class="content__logo-txt">English app</p>
-          </div>
-          <div class="content__desc">
-            <p class="content__desc-title">Effeng</p>
-            <p class="content__desc-txt">
-              It’s free application for learning <br>
-              English words
-            </p>
-          </div>
-          <div class="content__link">
-            <router-link :to="{ name: 'Login' }" class="btn"> Start learn </router-link>
-            <router-view />
-          </div>
-        </div>
-        <div class="content__img">
-          <img class="hand-effeng" src="../assets/img/phone.svg" alt="hand-effeng">
-        </div>
+        <HeroSection />
+        <AboutSection style="display: none;" />
+        <ContactSection style="display: none;" />
       </div>
     </main>
   </div>
@@ -31,11 +14,17 @@
 <script>
 import { defineComponent } from 'vue';
 import Header from '../components/Header.vue';
+import HeroSection from '../components/HomePage/HeroSection.vue';
+import AboutSection from '../components/HomePage/AboutSection.vue';
+import ContactSection from '../components/HomePage/ContactSection.vue';
 
 export default defineComponent({
-  name: 'FeedPage',
+  name: 'HomePage',
   components: {
     Header,
+    HeroSection,
+    AboutSection,
+    ContactSection,
   },
   props: {
     routes: {
@@ -61,6 +50,7 @@ export default defineComponent({
 .container {
   @extend %flexAlign;
   justify-content: space-between;
+  flex-direction: column;
   height: 100%;
   max-width: 1100px;
   width: 100%;
@@ -77,40 +67,6 @@ export default defineComponent({
   justify-content: center;
   height: 100%;
   background: bottom repeat-x url(../../public/img/waves.svg);
-
-  &__desc {
-    margin-bottom: 2rem;
-    &-title {
-      margin: 2rem 0;
-      font-size: 4.5rem;
-      font-family: $concertFont;
-      color: $yellow;
-    }
-    &-txt {
-      font-family: $secularFont;
-      font-size: 1.75rem;
-      color: $white;
-    }
-  }
-
-  &__logo {
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__logo-txt {
-    font-size: 1.5rem;
-    color: $white;
-    font-family: $secularFont;
-  }
-
-  &__img {
-    .hand-effeng {
-      width: 100%;
-      object-fit: cover;
-      animation: fadeScale 1s cubic-bezier(0.39, -1.05, 0.6, 1.95);
-    }
-  }
 }
 
 @media screen and (max-width: $laptop) {
@@ -129,32 +85,6 @@ export default defineComponent({
   .container {
     max-width: 320px;
     padding: 0 0.5rem;
-  }
-
-  .content {
-    overflow: hidden;
-    &__logo-txt {
-      font-size: 1rem;
-    }
-    &__desc-title {
-      font-size: 2.5rem;
-    }
-    &__desc-txt {
-      font-size: 1rem;
-    }
-  }
-
-  .hand-effeng {
-    transform: scale(1.5);
-    transition: $transition;
-    margin-left: 2.5rem;
-  }
-
-  .btn {
-    max-width: 140px;
-    font-size: 1rem;
-    letter-spacing: normal;
-    white-space: nowrap;
   }
 }
 </style>
